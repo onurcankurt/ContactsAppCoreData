@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="200" width="414" height="662"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="perconCell" id="UeY-K2-i51">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="perconCell" id="UeY-K2-i51" customClass="PersonCell" customModule="ContactsAppCoreData" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="102.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UeY-K2-i51" id="kZ7-CY-shC">
@@ -95,7 +95,7 @@
         <!--Add Person-->
         <scene sceneID="hmO-1S-J9d">
             <objects>
-                <viewController id="ZKE-QO-PYa" sceneMemberID="viewController">
+                <viewController id="ZKE-QO-PYa" customClass="AddPersonVC" customModule="ContactsAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAB-4y-fVS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="1855" y="-28"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailsVC-->
         <scene sceneID="zz7-JH-3dX">
             <objects>
-                <viewController id="4MY-NU-0SF" sceneMemberID="viewController">
+                <viewController id="4MY-NU-0SF" customClass="DetailsVC" customModule="ContactsAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gb0-zS-nOg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
