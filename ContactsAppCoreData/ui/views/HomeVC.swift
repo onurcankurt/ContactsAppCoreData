@@ -14,8 +14,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var personsTableView: UITableView!
     
     let context = appDelegate.persistentContainer.viewContext
-    
     var personList = [PersonInfo]()
+    var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,21 @@ class HomeVC: UIViewController {
         searchBar.delegate = self
         personsTableView.delegate = self
         personsTableView.dataSource = self
+        
+        _ = viewModel.personList.subscribe(onNext: { persons in
+            self.personList = persons
+            self.personsTableView.reloadData()
+        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.uploadPersons()
     }
 }
 
 extension HomeVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Searching: \(searchText)")
+        viewModel.search(searchText: searchText)
     }
 }
 
@@ -59,6 +68,25 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
                 destinationVC.detailsPerson = senderPerson
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let person = personList[indexPath.row]
+        
+        let deleteSwipeAction = UIContextualAction(style: .destructive, title: "Delete") { contextualAction, view, bool in
+            let deleteAlert = UIAlertController(title: "Delete", message: "Do you want to delete \(person.name!)", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let yesAction = UIAlertAction(title: "Yes", style: .destructive) { alertAction in
+                self.viewModel.delete(person: person)
+            }
+            deleteAlert.addAction(cancelAction)
+            deleteAlert.addAction(yesAction)
+            
+            self.present(deleteAlert, animated: true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteSwipeAction])
     }
 }
 

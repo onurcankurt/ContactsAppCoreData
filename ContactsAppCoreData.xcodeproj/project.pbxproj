@@ -9,23 +9,38 @@
 /* Begin PBXBuildFile section */
 		77840FC82BF0EFAB00E2048B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FC72BF0EFAB00E2048B /* AppDelegate.swift */; };
 		77840FCA2BF0EFAB00E2048B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FC92BF0EFAB00E2048B /* SceneDelegate.swift */; };
-		77840FCC2BF0EFAB00E2048B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FCB2BF0EFAB00E2048B /* ViewController.swift */; };
+		77840FCC2BF0EFAB00E2048B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FCB2BF0EFAB00E2048B /* HomeVC.swift */; };
 		77840FCF2BF0EFAB00E2048B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77840FCD2BF0EFAB00E2048B /* Main.storyboard */; };
 		77840FD22BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77840FD02BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodeld */; };
 		77840FD42BF0EFAC00E2048B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77840FD32BF0EFAC00E2048B /* Assets.xcassets */; };
 		77840FD72BF0EFAC00E2048B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77840FD52BF0EFAC00E2048B /* LaunchScreen.storyboard */; };
+		77840FDF2BF0F2B800E2048B /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FDE2BF0F2B800E2048B /* PersonCell.swift */; };
+		77840FE12BF0F2C800E2048B /* AddPersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FE02BF0F2C800E2048B /* AddPersonVC.swift */; };
+		77840FE32BF0F2D800E2048B /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FE22BF0F2D800E2048B /* DetailsVC.swift */; };
+		77840FEA2BF0F9EF00E2048B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FE92BF0F9EF00E2048B /* HomeViewModel.swift */; };
+		77840FEC2BF0F9FB00E2048B /* AddPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FEB2BF0F9FB00E2048B /* AddPersonViewModel.swift */; };
+		77840FEE2BF0FA0A00E2048B /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FED2BF0FA0A00E2048B /* DetailsViewModel.swift */; };
+		77840FF22BF0FA6F00E2048B /* PersonsDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77840FF12BF0FA6F00E2048B /* PersonsDaoRepository.swift */; };
+		778410012BF0FAF800E2048B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 778410002BF0FAF800E2048B /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77840FC42BF0EFAB00E2048B /* ContactsAppCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsAppCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77840FC72BF0EFAB00E2048B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77840FC92BF0EFAB00E2048B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77840FCB2BF0EFAB00E2048B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		77840FCB2BF0EFAB00E2048B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		77840FCE2BF0EFAB00E2048B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77840FD12BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsAppCoreData.xcdatamodel; sourceTree = "<group>"; };
 		77840FD32BF0EFAC00E2048B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77840FD62BF0EFAC00E2048B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77840FD82BF0EFAC00E2048B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77840FDE2BF0F2B800E2048B /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		77840FE02BF0F2C800E2048B /* AddPersonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonVC.swift; sourceTree = "<group>"; };
+		77840FE22BF0F2D800E2048B /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		77840FE92BF0F9EF00E2048B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		77840FEB2BF0F9FB00E2048B /* AddPersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewModel.swift; sourceTree = "<group>"; };
+		77840FED2BF0FA0A00E2048B /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		77840FF12BF0FA6F00E2048B /* PersonsDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsDaoRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778410012BF0FAF800E2048B /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +76,8 @@
 			children = (
 				77840FC72BF0EFAB00E2048B /* AppDelegate.swift */,
 				77840FC92BF0EFAB00E2048B /* SceneDelegate.swift */,
-				77840FCB2BF0EFAB00E2048B /* ViewController.swift */,
+				77840FE52BF0F88F00E2048B /* ui */,
+				77840FE42BF0F88600E2048B /* data */,
 				77840FCD2BF0EFAB00E2048B /* Main.storyboard */,
 				77840FD32BF0EFAC00E2048B /* Assets.xcassets */,
 				77840FD52BF0EFAC00E2048B /* LaunchScreen.storyboard */,
@@ -68,6 +85,68 @@
 				77840FD02BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodeld */,
 			);
 			path = ContactsAppCoreData;
+			sourceTree = "<group>";
+		};
+		77840FE42BF0F88600E2048B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				77840FF02BF0FA5900E2048B /* repo */,
+				77840FEF2BF0FA5200E2048B /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		77840FE52BF0F88F00E2048B /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				77840FE82BF0F8A600E2048B /* viewmodels */,
+				77840FE72BF0F89F00E2048B /* tablecell */,
+				77840FE62BF0F89A00E2048B /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		77840FE62BF0F89A00E2048B /* views */ = {
+			isa = PBXGroup;
+			children = (
+				77840FCB2BF0EFAB00E2048B /* HomeVC.swift */,
+				77840FE02BF0F2C800E2048B /* AddPersonVC.swift */,
+				77840FE22BF0F2D800E2048B /* DetailsVC.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		77840FE72BF0F89F00E2048B /* tablecell */ = {
+			isa = PBXGroup;
+			children = (
+				77840FDE2BF0F2B800E2048B /* PersonCell.swift */,
+			);
+			path = tablecell;
+			sourceTree = "<group>";
+		};
+		77840FE82BF0F8A600E2048B /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				77840FE92BF0F9EF00E2048B /* HomeViewModel.swift */,
+				77840FEB2BF0F9FB00E2048B /* AddPersonViewModel.swift */,
+				77840FED2BF0FA0A00E2048B /* DetailsViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		77840FEF2BF0FA5200E2048B /* entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		77840FF02BF0FA5900E2048B /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				77840FF12BF0FA6F00E2048B /* PersonsDaoRepository.swift */,
+			);
+			path = repo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +165,9 @@
 			dependencies = (
 			);
 			name = ContactsAppCoreData;
+			packageProductDependencies = (
+				778410002BF0FAF800E2048B /* RxSwift */,
+			);
 			productName = ContactsAppCoreData;
 			productReference = 77840FC42BF0EFAB00E2048B /* ContactsAppCoreData.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 77840FBB2BF0EFAB00E2048B;
+			packageReferences = (
+				77840FF32BF0FAF800E2048B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 77840FC52BF0EFAB00E2048B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,8 +226,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77840FCC2BF0EFAB00E2048B /* ViewController.swift in Sources */,
+				77840FCC2BF0EFAB00E2048B /* HomeVC.swift in Sources */,
+				77840FDF2BF0F2B800E2048B /* PersonCell.swift in Sources */,
 				77840FC82BF0EFAB00E2048B /* AppDelegate.swift in Sources */,
+				77840FEA2BF0F9EF00E2048B /* HomeViewModel.swift in Sources */,
+				77840FE12BF0F2C800E2048B /* AddPersonVC.swift in Sources */,
+				77840FE32BF0F2D800E2048B /* DetailsVC.swift in Sources */,
+				77840FEC2BF0F9FB00E2048B /* AddPersonViewModel.swift in Sources */,
+				77840FEE2BF0FA0A00E2048B /* DetailsViewModel.swift in Sources */,
+				77840FF22BF0FA6F00E2048B /* PersonsDaoRepository.swift in Sources */,
 				77840FD22BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodeld in Sources */,
 				77840FCA2BF0EFAB00E2048B /* SceneDelegate.swift in Sources */,
 			);
@@ -367,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		77840FF32BF0FAF800E2048B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		778410002BF0FAF800E2048B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77840FF32BF0FAF800E2048B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		77840FD02BF0EFAB00E2048B /* ContactsAppCoreData.xcdatamodeld */ = {

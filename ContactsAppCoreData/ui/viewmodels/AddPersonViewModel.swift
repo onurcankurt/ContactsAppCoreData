@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class AddPersonViewModel {
+    var prepo = PersonsDaoRepository()
+    
+    func save(name: String, phone: String){
+        prepo.save(name: name, phone: phone)
+    }
+}

@@ -53,6 +53,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="tuY-qa-asG" firstAttribute="leading" secondItem="pbF-vE-9DC" secondAttribute="leading" constant="5.5" id="MYP-Nr-qCh"/>
+                                                        <constraint firstItem="cLj-AV-1hg" firstAttribute="leading" secondItem="pbF-vE-9DC" secondAttribute="leading" id="UfY-py-eCo"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>

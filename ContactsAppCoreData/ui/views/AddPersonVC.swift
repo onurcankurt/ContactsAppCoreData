@@ -12,6 +12,8 @@ class AddPersonVC: UIViewController {
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var textfieldPhone: UITextField!
     
+    var viewModel = AddPersonViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,7 @@ class AddPersonVC: UIViewController {
 
     @IBAction func buttonSave(_ sender: Any) {
         if let name = textfieldName.text, let phone = textfieldPhone.text {
-            print("\(name)-\(phone) saved.")
+            viewModel.save(name: name, phone: phone)
         }
     }
 }
