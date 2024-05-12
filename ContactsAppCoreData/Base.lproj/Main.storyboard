@@ -61,6 +61,10 @@
                                                 <constraint firstItem="pbF-vE-9DC" firstAttribute="top" secondItem="kZ7-CY-shC" secondAttribute="top" constant="16" id="Wi0-Wm-weB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellNameLabel" destination="cLj-AV-1hg" id="Vg9-ko-V6b"/>
+                                            <outlet property="cellPhoneLabel" destination="tuY-qa-asG" id="ZrC-nm-XZf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,6 +89,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="personsTableView" destination="LWZ-dc-nte" id="N9c-E6-ZEl"/>
+                        <outlet property="searchBar" destination="1vb-tU-vas" id="BeW-HU-Htd"/>
                         <segue destination="4MY-NU-0SF" kind="show" identifier="toDetailsVC" id="S3e-p1-lhA"/>
                     </connections>
                 </viewController>
@@ -100,12 +106,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-Hc-hx9">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-Hc-hx9">
                                 <rect key="frame" x="50" y="194" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-Ot-NeX">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQs-Ot-NeX">
                                 <rect key="frame" x="50" y="289.5" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -116,6 +122,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Save">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonSave:" destination="ZKE-QO-PYa" eventType="touchUpInside" id="gsi-yK-VaQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KeA-Re-EHS"/>
@@ -132,12 +141,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Person" id="cmd-qL-BWe"/>
+                    <connections>
+                        <outlet property="textfieldName" destination="l5d-Hc-hx9" id="Yhz-Gw-oUf"/>
+                        <outlet property="textfieldPhone" destination="nQs-Ot-NeX" id="nS3-KF-oCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8h-w2-bkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1855" y="-28"/>
         </scene>
-        <!--DetailsVC-->
+        <!--Person Detail-->
         <scene sceneID="zz7-JH-3dX">
             <objects>
                 <viewController id="4MY-NU-0SF" customClass="DetailsVC" customModule="ContactsAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
@@ -145,12 +158,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dks-be-CZa">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dks-be-CZa">
                                 <rect key="frame" x="50" y="194" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-qM-36l">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6zo-qM-36l">
                                 <rect key="frame" x="50" y="289.5" width="314" height="45.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -161,6 +174,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Update">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonUpdate:" destination="4MY-NU-0SF" eventType="touchUpInside" id="ZIW-cU-0LT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TRP-sb-nZS"/>
@@ -176,7 +192,11 @@
                             <constraint firstItem="Dks-be-CZa" firstAttribute="leading" secondItem="TRP-sb-nZS" secondAttribute="leading" constant="50" id="wKB-bm-Wrp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2Nq-Dz-Rm1"/>
+                    <navigationItem key="navigationItem" title="Person Detail" id="2Nq-Dz-Rm1"/>
+                    <connections>
+                        <outlet property="textfieldName" destination="Dks-be-CZa" id="fvt-iC-RE4"/>
+                        <outlet property="textfieldPhone" destination="6zo-qM-36l" id="o63-kc-T6Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96Y-xs-9fE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

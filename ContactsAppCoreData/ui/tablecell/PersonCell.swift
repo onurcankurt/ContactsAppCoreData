@@ -8,7 +8,10 @@
 import UIKit
 
 class PersonCell: UITableViewCell {
-
+    
+    @IBOutlet weak var cellNameLabel: UILabel!
+    @IBOutlet weak var cellPhoneLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
